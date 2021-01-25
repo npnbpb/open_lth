@@ -37,7 +37,7 @@ class Dataset(base.ImageDataset):
         return Dataset(test_set.data, test_set.targets)
 
     def __init__(self,  examples, labels):
-        tensor_transforms = [torchvision.transforms.Normalize(mean=[0.1307], std=[0.3081])]
+        tensor_transforms = [torchvision.transforms.Normalize(mean=[0.2860], std=[0.3530])]
         super(Dataset, self).__init__(examples, labels, [], tensor_transforms)
 
     def example_to_image(self, example):
