@@ -10,6 +10,7 @@ from foundations import hparams
 from lottery.desc import LotteryDesc
 from models import base
 from pruning import sparse_global
+from math import floor
 
 
 class Model(base.Model):
@@ -26,7 +27,7 @@ class Model(base.Model):
             layers.append(nn.Conv2d(in_features, out_features, 3, 1, 1))
             in_features = out_features
 
-        final_size = int(mnist_size/(4**len(channels)) * out_features)
+        final_size = int(floor(28/(2**len(channels)))**2 * out_features)
 
         self.conv_layers = nn.ModuleList(layers)
         self.fc = nn.Linear(final_size, outputs)
