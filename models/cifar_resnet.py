@@ -139,12 +139,8 @@ class Model(base.Model):
         )
 
         training_hparams = hparams.TrainingHparams(
-            optimizer_name='sgd',
-            momentum=0.9,
-            milestone_steps='80ep,120ep',
-            lr=0.1,
-            gamma=0.1,
-            weight_decay=1e-4,
+            optimizer_name='adam',
+            lr=5e-2,
             training_steps='160ep',
         )
 
