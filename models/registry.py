@@ -8,11 +8,11 @@ import torch
 from foundations import paths
 from foundations.hparams import ModelHparams
 from foundations.step import Step
-from models import cifar_resnet, cifar_vgg, mnist_lenet, imagenet_resnet, mnist_simplecnn, fashionmnist_simplecnn, svhn_simplecnn
+from models import cifar_resnet, cifar_vgg, mnist_lenet, imagenet_resnet, mnist_simplecnn, fashionmnist_simplecnn, svhn_simplecnn, cifar10_simplecnn, cifar100_simplecnn
 from models import bn_initializers, initializers
 from platforms.platform import get_platform
 
-registered_models = [mnist_lenet.Model, cifar_resnet.Model, cifar_vgg.Model, imagenet_resnet.Model, mnist_simplecnn.Model, fashionmnist_simplecnn.Model, svhn_simplecnn.Model]
+registered_models = [mnist_lenet.Model, cifar_resnet.Model, cifar_vgg.Model, imagenet_resnet.Model, mnist_simplecnn.Model, fashionmnist_simplecnn.Model, svhn_simplecnn.Model, cifar10_simplecnn.Model, cifar100_simplecnn.Model]
 
 
 def get(model_hparams: ModelHparams, outputs=None):
