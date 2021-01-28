@@ -1,5 +1,5 @@
-python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=1
-python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=2
-python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=3
-python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=4
-python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=5
+python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=1 --do_not_augment
+python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=2 --do_not_augment
+python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=3 --do_not_augment
+python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=4 --do_not_augment
+python3.7 open_lth.py lottery --default_hparams=fashionmnist_simplecnn_16_32  --levels=35 --replicate=5 --do_not_augment
