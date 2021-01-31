@@ -5,6 +5,8 @@
 
 import torch.nn as nn
 import torch.nn.functional as F
+import torch
+import numpy as np
 
 from foundations import hparams
 from lottery.desc import LotteryDesc
@@ -119,7 +121,20 @@ class Model(base.Model):
         D = (D - 2) // 6
         plan = [(W, D), (2*W, D), (4*W, D)]
 
-        return Model(plan, initializer, outputs)
+        new_model = Model(plan, initializer, outputs)
+        
+        # sum = 0
+        # sum_nobn = 0
+        # for name, param in new_model.named_parameters():
+        #     if param.requires_grad:
+        #         print(name, param.data.shape)
+        #         sum+= np.prod(list(param.data.shape))
+        #         if 'bn' not in name:
+        #             sum_nobn += np.prod(list(param.data.shape))
+
+        # print(sum, sum_nobn)
+
+        return new_model
 
     @property
     def loss_criterion(self):
@@ -140,8 +155,8 @@ class Model(base.Model):
 
         training_hparams = hparams.TrainingHparams(
             optimizer_name='adam',
-            lr=5e-2,
-            training_steps='160ep',
+            lr=1e-2,
+            training_steps='4ep',
         )
 
         pruning_hparams = sparse_global.PruningHparams(
