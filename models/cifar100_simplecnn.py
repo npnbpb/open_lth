@@ -88,7 +88,7 @@ class Model(base.Model):
 
         training_hparams = hparams.TrainingHparams(
             optimizer_name='adam',
-            lr=5e-3,
+            lr=1e-02,
             training_steps='5ep',
         )
 
