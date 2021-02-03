@@ -91,7 +91,7 @@ class Model(base.Model):
         training_hparams = hparams.TrainingHparams(
             optimizer_name='adam',
             lr=5e-2,
-            training_steps='5ep',
+            training_steps='3ep',
         )
 
         pruning_hparams = sparse_global.PruningHparams(
